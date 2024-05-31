@@ -8,7 +8,9 @@ Este proyecto es una aplicacion de loteria desarrollada en php con el framework 
 
 ## Instalación
 
-
+```bash
+git clone https://github.com/ExequielGL/RelacionesLaravel.git
+``` 
 
 ## Modo de uso
 ## Autores
