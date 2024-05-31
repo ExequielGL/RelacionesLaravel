@@ -1,0 +1,48 @@
+@startuml ER-diagram
+
+entity User {
+    * id : number <<generated>>
+    --
+    * name : string
+    * email : string
+    * password : string
+    email_verified_at : timestamp
+    * remember_token :string
+    created_at : timestamp
+    updated_at : timestamp
+}
+
+entity Address {
+    * id : number <<generated>>
+    --
+    * pais : string
+    * ciudad : string
+    * comuna : string
+    * calle : string
+    * numero : number
+    created_at : timestamp
+    updated_at : timestamp
+    user_id : number <<FK>>
+}
+
+entity Post {
+    * id : number <<generated>>
+    --
+    * titulo : string
+    * contenido : string
+    * categoria : string
+    * published_at: timestamp
+    * is_active : boolean
+    created_at : timestamp
+    updated_at : timestamp
+
+}
+
+User ||--o{ Address
+
+' o -> 0
+' | -> 1
+' { -> 1..*
+' } -> 1..*
+
+@enduml
